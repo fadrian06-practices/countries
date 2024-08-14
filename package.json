@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "esbuild": "^0.21.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/build.mjs",
+    "setup:linters": "node scripts/setup-linters.mjs",
+    "setup:rome": "node scripts/setup-rome.mjs"
+  }
+}
