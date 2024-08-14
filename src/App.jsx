@@ -40,10 +40,24 @@ export default function App() {
     setFilteredCountries(foundCountries)
   }
 
+  function selectCountry(officialName = '') {
+    if (!officialName) {
+      return
+    }
+
+    const foundCountry = filteredCountries.find(country => {
+      return country.name.official === officialName
+    })
+
+    if (foundCountry) {
+      setFilteredCountries([foundCountry])
+    }
+  }
+
   return (
     <>
       <Finder find={find} />
-      <Countries countries={filteredCountries} />
+      <Countries countries={filteredCountries} selectCountry={selectCountry} />
     </>
   )
 }
